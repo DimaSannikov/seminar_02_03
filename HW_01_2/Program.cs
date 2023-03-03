@@ -13,7 +13,7 @@ string isItPalindrome(int digit)
     int digitInList = digit;
     int digitsCount = digit;
 
-    while(digitInList > 0 & digitsCount > 0)
+    while(digitInList > 0 & digitsCount > 0)   // Цикл в котором каждая цифра числа добавляется в список
     {
         digitInList = digitsCount % 10;
         digitsCount = digitsCount / 10;
@@ -21,17 +21,17 @@ string isItPalindrome(int digit)
         digitsList.Add(digitInList);
     }
 
-    if(digitsList.Count < 2)
+    if(digitsList.Count < 2)                     // Проверяем чтобы число было с двумя и более знаками
     {
         result = result;
     }
     else
     {
-        int countFirst = 0;
-        int countLast = digitsList.Count - 1;
-        int midList = digitsList.Count / 2;
+        int countFirst = 0;                      // Первый элемент списка
+        int countLast = digitsList.Count - 1;    // Последний элемент списка
+        int midList = digitsList.Count / 2;      // Середина списка
 
-        while(countFirst < countLast)
+        while(countFirst < countLast)            // Цикл в котором сравниваются элементы списка
         {
             if(digitsList[countFirst] == digitsList[countLast])
             {
