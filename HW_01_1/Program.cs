@@ -9,20 +9,20 @@ int digit = int.Parse(Console.ReadLine());
 
 string isItPalindrome(int number)
 {
-    string strDigit = number.ToString();
+    string strDigit = number.ToString();        // Преобразуем число в строку
     string result = "Введите число с количеством знаков 2 и более";
 
-    if(strDigit.Length < 2)
+    if(strDigit.Length < 2)                     // Проверяем чтобы число было с двумя и более знаками
     {
         result = result;
     }
     else
     {
-        int countFirst = 0;
-        int countLast = strDigit.Length - 1;
-        int midList = strDigit.Length / 2;
+        int countFirst = 0;                     // Первый элемент строки
+        int countLast = strDigit.Length - 1;    // Последний элемент строки
+        int midList = strDigit.Length / 2;      // Середина строки
 
-        while(countFirst < countLast)
+        while(countFirst < countLast)           // Цикл в котором сравниваются элементы строки
         {
             if(strDigit[countFirst] == strDigit[countLast])
             {
